@@ -7,6 +7,10 @@ This program will load an UPPER/lowercase .64c font into the correct ASCII posit
 SIMPLEFONTLOADER.BAS
 This program is a simple demonstration, loading a .64c font into the lowercase ASCII positions.
 
+Description:
+The .c64 font files are in raw byte format.   The first two bytes are worthless for our purposes and are tossed.  The next eight bytes are the for the first character of the font, the next eight bytes for the next character, and so on.   We read this data in from a file using a FOR/NEXT loop which reads eight bytes at a time converts the bytes to strings applies the ascii code of each byte to the VDU 23 <char>, byte1, byte2, byte3, byte4, byte5, byte6, byte7, byte8
+
+
 Fonts are from http://home-2002.code-cop.org/c64/
 
 A good online font editor can be found at: https://petscii.krissz.hu/
